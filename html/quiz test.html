@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+<script>
+	
+	var answerCorrectCount = 0;
+	var answerIncorrectCount = 0;
+	
+	//check password, highlight if incorrect, make quiz visible if correct
+	function passwordCheck() {	
+		var inputWord = document.getElementById("password").value;
+		var promptText = document.getElementById("promptText");
+		
+		if(inputWord == "password") {
+			document.getElementById("quiz").style.display = "block";
+			document.getElementById("blocker").style.display = "none";
+		} else {
+			promptText.innerHTML = "Re-enter password:";	
+			promptText.style.color = "red";
+			document.getElementById("password").style.border = "1px solid red";
+		}
+	}
+	
+	//check answer, highlight colour, remove button
+	function answerCheck() {
+		var radioCheckOne = document.getElementById("formOneC").checked;
+		
+		if(radioCheckOne) {
+			document.getElementById("questionOne").style.border = "1px solid green";
+			answerCorrectCount++;
+			document.getElementById("questionOneButton").remove();
+		} else {
+			document.getElementById("questionOne").style.border = "1px solid red";
+			answerIncorrectCount++;
+			document.getElementById("questionOneButton").remove();
+		}	
+	}
+	
+</script>
+<style>
+	#quiz {
+		display : none;
+	}
+
+	header h1 {
+		text-align : center;
+	}
+	
+	#blocker {
+		width : 30%;
+		margin-left : 35%;	
+		text-align : center;
+	}
+
+	article h3{
+		text-align : center;
+	}
+	
+	#quiz h3{
+		text-align : center;
+	}
+	
+	#quiz #questionOne{
+		width : 30%;
+		margin-left : 35%;	
+		text-align : center;
+	}
+	
+	#quiz #questionOne form{
+		text-align : left;
+	}
+	
+</style>
+
+</head>
+<body>
+<header>
+	<h1>Quiz</h1>
+</header>
+<div id="blocker">
+	<form>
+		<p id="promptText">Password:</p>
+		<input type="text" id="password">
+	</form>	
+	<br>
+	<button onclick="passwordCheck()">Validate</button>
+</div>
+
+<div id="quiz">
+<h3>Please answer the following questions</h3>
+	<div id="questionOne">
+		<h5>What is the answer to 1+1?</h5>
+		<form id="formOne">
+			<input type="radio" name="number" value="0" id="formOneA" checked> 0<br>
+			<input type="radio" name="number" value="1" id="formOneB"> One<br>
+			<input type="radio" name="number" value="2" id="formOneC"> Two<br>
+			<input type="radio" name="number" value="3" id="formOneD"> 8947274912743<br>		
+		</form>
+		<button onclick="answerCheck()" id="questionOneButton">Check</button>
+	</div>
+</div>
+</body>
+</html>
