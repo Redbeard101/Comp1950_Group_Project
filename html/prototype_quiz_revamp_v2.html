@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!--  COMP 1950 Project Group Jonathan, Alan, Tina -->
+		<title>COMP1950  | Quiz 01: Tools and Standards | BCIT</title>
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<link  href="/css/reset.css" rel="stylesheet" type="text/css" title="default styles">
+		
+		<!--temp internal style-->
+		<style>
+			.contblock {
+				display : none;
+			}
+			
+			h2 {
+				display : none;
+			}
+		</style>
+
+		<script>
+		
+		var markTotal = 0;
+		
+		//check password, highlight if incorrect, make quiz visible if correct
+		function passwordCheck() {	
+		
+			var inputWord = document.getElementById("password").value;
+			var promptText = document.getElementById("promptText");
+			
+			if(inputWord == "password") {
+				var blockArray = document.getElementsByClassName("contblock");
+				for(let i = 0; i < blockArray.length; i++) {
+					blockArray[i].style.display = "block"
+				}
+				document.getElementById("blocker").style.display = "none";
+			} else {
+				promptText.innerHTML = "Re-enter password:";	
+				promptText.style.color = "red";
+				document.getElementById("password").style.border = "1px solid red";
+			}
+		}
+		
+		//Check answer by iterating through each question and comparing button value to answer array.
+		//Remove button at completion and display mark.
+		function answerCheck() {
+		
+			var solutionArray = [2,2,2,2];		
+			var blockArray = document.getElementsByClassName("contblock");
+			
+				for(let i = 0; i < blockArray.length; i++) {	
+				
+					var answerArray = blockArray[i].getElementsByTagName("INPUT");
+					
+					for(let j = 0; j < answerArray.length; j++) {				
+						if(answerArray[j].checked && solutionArray[i] == answerArray[j].value){
+							markTotal++;
+						}
+					}				
+				}				
+				document.getElementById("endBlock").innerHTML = "<p>" + markTotal + "/4" + "</p>";				
+		}
+	
+		</script>
+		
+
+	</head>	
+	<body id="top">
+		<div id="container">
+			<!-- header begins
+			use
+			 class="current_class"
+			to highlight current class
+			-->
+			<div id="header">
+				<a href="/"><img src="../images/logo.png" alt="" /></a>
+				<h1>COMP1950<br />Web Development And Design 2</h1>
+				<h1>Quiz 01: Tools and Standards</h1>			
+			</div>
+
+			<!-- header ends --><!-- navigation begins 
+
+			use <a class="current_page">
+			to highlight the current page
+			-->
+
+			<!-- navigation ends --><!-- 
+			page content begins 
+			*************************************
+			-->
+
+			<div id="blocker">
+				<form>
+					<p id="promptText">Password:</p>
+					<input type="text" id="password">
+				</form>	
+				<br>
+				<button onclick="passwordCheck()">Validate</button>
+			</div>
+			
+			
+			<div id="quizInformation">			
+				<b>Quiz one</b>
+				<p>This quiz will cover content from class one.</p>
+				<ul>
+					<li>15 Minutes</li>
+					<li>Multiple Choice</li>
+				</ul>
+			</div>
+
+			<h2 id="questionOne">Question One</h2>
+			<div class="contblock">
+				<div>
+					<h5>What is the answer to 1+1?</h5>
+					<form class="multipleChoice">
+						<input type="radio" name="number" value="0" checked> 0<br>
+						<input type="radio" name="number" value="1"> One<br>
+						<input type="radio" name="number" value="2"> Two<br>
+						<input type="radio" name="number" value="3"> 8947274912743<br>		
+					</form>
+				</div>
+			</div>
+			
+			<h2 id="questionTwo">Question Two</h2>
+			<div class="contblock">
+				<div>
+					<h5>What is the answer to 1+1?</h5>
+					<form class="multipleChoice">
+						<input type="radio" name="number" value="0" checked> 0<br>
+						<input type="radio" name="number" value="1"> One<br>
+						<input type="radio" name="number" value="2"> Two<br>
+						<input type="radio" name="number" value="3"> 8947274912743<br>		
+					</form>
+				</div>
+			</div>
+			
+			<h2 id="questionThree">Question Three</h2>
+			<div class="contblock">
+				<div>
+					<h5>What is the answer to 1+1?</h5>
+					<form class="multipleChoice">
+						<input type="radio" name="number" value="0" checked> 0<br>
+						<input type="radio" name="number" value="1"> One<br>
+						<input type="radio" name="number" value="2"> Two<br>
+						<input type="radio" name="number" value="3"> 8947274912743<br>		
+					</form>
+				</div>
+			</div>
+			
+			<h2 id="questionFour">Question Four</h2>
+			<div class="contblock">
+				<div>
+					<h5>What is the answer to 1+1?</h5>
+					<form class="multipleChoice">
+						<input type="radio" name="number" value="0" checked> 0<br>
+						<input type="radio" name="number" value="1"> One<br>
+						<input type="radio" name="number" value="2"> Two<br>
+						<input type="radio" name="number" value="3"> 8947274912743<br>		
+					</form>
+				</div>
+			</div>
+			
+			<h2 id="quiz">Conclude Quiz</h2>
+			<div id="quizEnding">
+				<div id="endBlock">
+					<h5>Submit quiz?</h5>
+					<button onclick="answerCheck()" id="questionCheckButton">Check</button>
+				</div>
+			</div>
+
+			<!-- 
+			page content ends
+			*************************************
+			-->		
+			
+			<!-- footer begins -->
+			<div id="footer">
+				<ul>
+					<li><a href="#top">Top of Page</a></li>	
+					<li><a href="http://validator.w3.org/check/referer" rel="nofollow" title="Validate as HTML5">Validate HTML</a></li>			
+				</ul>
+			</div>
+			<!-- footer ends -->
+
+		</div>
+	</body>
+</html>
