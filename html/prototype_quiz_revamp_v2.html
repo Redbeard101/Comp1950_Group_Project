@@ -15,6 +15,10 @@
 				display : none;
 			}
 			
+			#quizEnding,#quiz {
+				display : none;
+			}
+			
 			h2 {
 				display : none;
 			}
@@ -34,6 +38,8 @@
 				var blockArray = document.getElementsByClassName("contblock");
 				for(let i = 0; i < blockArray.length; i++) {
 					blockArray[i].style.display = "block"
+					document.getElementById("quiz").style.display = "block";
+					document.getElementById("quizEnding").style.display = "block";
 				}
 				document.getElementById("blocker").style.display = "none";
 			} else {
