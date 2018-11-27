@@ -10,8 +10,8 @@
 }
 
 .top-bar-right {
-    padding-right: 360px;
-    padding-top: 25px;
+    padding-right: 330px;
+    padding-top: 33px;
 }
 
 .top-bar-left {
@@ -36,7 +36,7 @@
     color: #0087ff;
     font-family: helvetica, sans-serif;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: none;
     text-decoration: none;
     padding: 19px;
     margin: 0;
@@ -44,6 +44,11 @@
 }
 
 .menu a:hover, .menu a:active {
+    color: #d69c28;
     text-decoration: none;
-    color: #0099ff;
+    font-weight: bold;
+}
+
+.menu-text {
+    font-size: 24px;
 }
