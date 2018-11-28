@@ -44,15 +44,6 @@ h2 {
   border: solid 2px #4c64cf;
 }
 
-h2:hover {
-  cursor: pointer;
-  background-color: #5d90ee;
-}
-
-h2:active {
-  cursor: pointer;
-}
-
 h3, h4, h5, h6 {
   color: #888;
 }
@@ -68,95 +59,9 @@ h3, h4, h5, h6 {
 }
 
 #header {
-  overflow: auto;
+  overflow-y:auto
   padding-top: 25px;
   background-color: #a0aeff;
-}
-
-#header a {
-  text-align: center;
-  margin: auto;
-}
-
-#header_classes {
-  background-color: #ff48f0;
-}
-
-#header_classes ul {
-  list-style-type: none;
-  float: right;
-  margin: 0px;
-}
-
-#header_classes li {
-  float: left;
-  background-color: #eee;
-  border-radius: 2px;
-  padding: 5px;
-  margin: 5px;
-  font-size: 1.5em;
-}
-
-#header_classes li:hover {
-  background-color: #d2ffee;
-}
-
-#header_links ul {
-  list-style-type: none;
-  float: left;
-  margin: 0px;
-}
-
-#header_links li {
-  float: left;
-  background-color: #eee;
-  border-radius: 2px;
-  padding: 5px;
-  margin: 5px;
-  font-size: 1.5em;
-}
-
-#header_links li:hover {
-  background-color: #d2ffee;
-}
-
-#navigation {
-  position: relative;
-  padding: 5px;
-}
-
-#navigation ul {
-  text-align: center;
-  background-color: #1c46c4;
-  width: 100%;
-  padding: 5px;
-  list-style-type: none;
-  margin: 0px;
-  margin-top: 3px;
-}
-
-#navigation ul li {
-  display: inline;
-  color: #fff;
-  font-size: 1.5em;
-  margin: 10px;
-}
-
-#navigation ul li a {
-  color: #fff;
-  text-decoration: none;
-}
-
-#navigation ul li a:hover {
-  background-color: #180668;
-}
-
-li a {
-  text-decoration: none;
-}
-
-#navigation ul li ul {
-  display: none;
 }
 
 #logo {
@@ -168,5 +73,3 @@ li a {
   display: none;
   background-color: #eaf7ff;
 }
-
-
