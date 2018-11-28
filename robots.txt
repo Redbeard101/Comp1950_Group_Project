@@ -1,0 +1,2 @@
+User-agent: *
+Disallow: /prototype_quiz_revamp_v2.html
