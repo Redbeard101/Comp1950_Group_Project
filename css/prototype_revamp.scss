@@ -10,6 +10,20 @@ $font_default : 'Montserrat','Franklin Gothic Medium', sans-serif;
         padding: 0;
     }
 
+    #toolbar{
+        text-align: right;
+        position:fixed;
+        top: 0%;
+        width: 100%;
+        background-color: #7CB4B8;
+        border-bottom: solid 2px rgb(12, 31, 116);
+        transition: all 0.5s ease;
+    }
+
+    #toolbar:hover{
+        padding: 20px 0;
+    }
+
     #container{
         display: flex;
         flex-wrap: wrap;
@@ -24,6 +38,8 @@ $font_default : 'Montserrat','Franklin Gothic Medium', sans-serif;
     }
 
     h2{
+        flex-grow: 1;
+        transition: background-color 0.3s linear;
         background-color:rgb(62, 111, 185);
         color:#ffffff;
         padding: 15px 15px;
@@ -33,12 +49,11 @@ $font_default : 'Montserrat','Franklin Gothic Medium', sans-serif;
         font-size: 1.2em;
         border:solid 2px rgb(12, 31, 116);
         width: 19%;
-
     }
 
     h2:hover{
         cursor: pointer;
-        background-color:rgb(93, 144, 238);
+        background-color:#9ec9ff;
     }
 
     h2:active{
