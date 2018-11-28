@@ -29,11 +29,10 @@
 			to highlight current class
 			-->
 			<div id="header">
-				<a href="/" id="logo"><img src="../images/logo.png" alt="logo" /></a>
-				<h1>COMP1950<br />Web Development And Design 2</h1>
+				<h1 id ="top_header">COMP1950<br />Web Development And Design 2</h1>
 				<h1>Lecture 01: Tools and Standards</h1>
 				<div id="header_classes">
-				<h2>COMP1950 Classes: </h2>
+				<h1>COMP1950 Classes: </h1>
 				<ul>
 					<li><a href="#">Tuesday</a></li>
 					<li><a class='current_class' href="#">Thursday</a></li>
@@ -54,7 +53,7 @@
 			use <a class="current_page">
 			to highlight the current page
 			-->
-			<div id="navigation">			
+			<div id="navigation">
 				<ul>
 					<li><a id="nav_popup">Lectures</a>
 						<ul>
@@ -70,21 +69,14 @@
 							<li><a href="/1950/lecture/10/">10: Methodology</a></li>				
 						</ul>
 					</li>
-					<li><a id="resources"  href="/1950/resources/">Resources</a></li>
-					<li><a id="about"  href="/1950/about/">About</a></li>
+					<li><a id="resources"  href="#">Resources</a></li>
+					<li><a id="about"  href="#">About</a></li>
 				</ul>			
 			</div>
 			<!-- navigation ends --><!-- 
 			page content begins 
 			*************************************
 			-->
-
-			<!--aygc: this will track on right side of screen as nav bar-->
-			<div style="position:fixed;top:50%;right:0;background-color:white;text-align:center">
-			<p>HOME</p>
-			<a href="#header">TOP</a>
-			<p>HTML5</p>
-			</div>
 
 			<h2>Agenda</h2>
 			
@@ -498,6 +490,15 @@
 			page content ends
 			*************************************
 			-->		
+
+			<div id="toolbar">
+				<div>
+					<img id = "logo" src="../images/logo.png" alt="logo" />
+					<img id = "expand" src="/images/add.png" alt="add">
+					<img id = "collapse" src="/images/minus.png" alt="minus">
+					<a href="#">Top</a>
+				</div>
+			</div>
 			
 			<!-- footer begins -->
 			<div id="footer">
