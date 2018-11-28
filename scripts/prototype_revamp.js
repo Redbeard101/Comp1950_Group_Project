@@ -1,5 +1,5 @@
 $(document).ready(function(){
     $("h2").click(function(){
-        $(this).next('.contblock').fadeToggle("fast", "linear");
+        $(this).next('.contblock').slideToggle(450, "linear");
 	});		
 });
