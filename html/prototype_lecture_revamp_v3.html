@@ -9,17 +9,9 @@
 		<script src="../scripts/navigation_base.js" type="text/javascript"></script>
 		<script src="../scripts/prototype_revamp.js" type="text/javascript"></script>
 
-		<link  href="../css/reset.css" rel="stylesheet" type="text/css" title="default styles">
-		<link  href="../css/prototype_revamp.css" rel="stylesheet" type="text/css" title="default styles">
+		<link  href="../css/reset.css" rel="stylesheet" type="text/css" title="default styles"/>
+		<link  href="../css/prototype_revamp.css" rel="stylesheet" type="text/css" title="default styles"/>
 		
-		<script>
-		
-			//aygc:Reset value in select box
-			function resetSelectBox() {
-				document.getElementById("topic_select").selectedIndex = null;
-			}
-			
-		</script>
 	</head>	
 	<body id="top">
 		<div id="container">
@@ -31,79 +23,49 @@
 			<div id="header">
 				<h1 id ="top_header">COMP1950<br />Web Development And Design 2</h1>
 				<h1>Lecture 01: Tools and Standards</h1>
-				<div id="header_classes">
-				<h1>COMP1950 Classes: </h1>
-				<ul>
-					<li><a href="#">Tuesday</a></li>
-					<li><a class='current_class' href="#">Thursday</a></li>
-					<li><a href="#">Six Week</a></li>
-				</ul>
-				</div>	
-				<div id="header_links">
-				<ul>
-					<li><a href="https://www.bcit.ca/">BCIT</a></li>
-					<li><a href="https://my.bcit.ca/">myBCIT</a></li>
-					<li><a href="https://learn.bcit.ca/">D2L</a></li>				
-				</ul>
-				</div>				
 			</div>
 
-			<!-- header ends --><!-- navigation begins 
-
-			use <a class="current_page">
-			to highlight the current page
-			-->
-			<div id="navigation">
-				<ul>
-					<li><a id="nav_popup">Lectures</a>
+			<!-- header ends --><!-- navigation begins -->
+			<div id="toolbar">
+					<div id ="header_buttons">
+						<img id = "logo" src="../images/logo.png" alt="logo" />
+						<img id = "expand" src="/images/add.png" alt="add"/>
+						<img id = "collapse" src="/images/minus.png" alt="minus"/>
 						<ul>
-							<li><a href="/1950/lecture/01/">01: Tools &amp; Standards</a></li>
-							<li><a href="/1950/lecture/02/">02: HTML5</a></li>
-							<li><a href="/1950/lecture/03/">03: Advanced CSS</a></li>
-							<li><a href="/1950/lecture/04/">04: CSS Layouts</a></li>
-							<li><a href="/1950/lecture/05/">05: Responsive Design</a></li>
-							<li><a href="/1950/lecture/06/">06: CSS3</a></li>
-							<li><a href="/1950/lecture/07/">07: Javascript Frameworks</a></li>
-							<li><a href="/1950/lecture/08/">08: Server Architecture</a></li>
-							<li><a href="/1950/lecture/09/">09: Templates, Tools</a></li>
-							<li><a href="/1950/lecture/10/">10: Methodology</a></li>				
+								<li><a href="https://www.bcit.ca/">BCIT</a></li>
+								<li><a href="https://my.bcit.ca/">myBCIT</a></li>
+								<li><a href="https://learn.bcit.ca/">D2L</a></li>				
 						</ul>
-					</li>
-					<li><a id="resources"  href="#">Resources</a></li>
-					<li><a id="about"  href="#">About</a></li>
-				</ul>			
-			</div>
-			<!-- navigation ends --><!-- 
-			page content begins 
-			*************************************
-			-->
+					</div>
+					<div id="header_classes">
+						<ul>
+							<li><a href="#">Tuesday</a></li>
+							<li><a class='current_class' href="#">Thursday</a></li>
+							<li><a href="#">Six Week</a></li>
+						</ul>
+					</div>
+					<div id="navigation">
+							<ul>
+								<li><a id="nav_popup">Lectures</a>
+									<ul>
+										<li><a href="/1950/lecture/01/">01: Tools &amp; Standards</a></li>
+										<li><a href="/1950/lecture/02/">02: HTML5</a></li>
+										<li><a href="/1950/lecture/03/">03: Advanced CSS</a></li>
+										<li><a href="/1950/lecture/04/">04: CSS Layouts</a></li>
+										<li><a href="/1950/lecture/05/">05: Responsive Design</a></li>
+										<li><a href="/1950/lecture/06/">06: CSS3</a></li>
+										<li><a href="/1950/lecture/07/">07: Javascript Frameworks</a></li>
+										<li><a href="/1950/lecture/08/">08: Server Architecture</a></li>
+										<li><a href="/1950/lecture/09/">09: Templates, Tools</a></li>
+										<li><a href="/1950/lecture/10/">10: Methodology</a></li>				
+									</ul>
+								</li>
+								<li><a id="resources"  href="#">Resources</a></li>
+								<li><a id="about"  href="#">About</a></li>
+							</ul>			
+						</div>			
+				</div>
 
-			<h2>Agenda</h2>
-			
-			
-			<div class="contblock">
-				<!--aygc:New select box navigation-->
-				<label for="topic_select">Choose a topic:</label>
-				<select id="topic_select" onchange="window.location.href=this.value; resetSelectBox();">
-					<option value="">--Please choose an option--</option>
-					<option value="#introductions">Introductions</option>
-					<option value="#orientation">Orientation</option>
-					<option value="#tools">Web development tools</option>
-					<option value="#standards">Standards based development</option>
-					<option value="#todo">To Do</option>
-				</select>
-				
-				<!--aygc:Old list topic navigation
-				<ul>
-					<li><a href="#introductions">Introductions</a></li>
-					<li><a href="#orientation">Orientation</a></li>
-					<li><a href="#tools">Web development tools</a></li>
-					<li><a href="#standards">Standards based development</a></li>
-					<li><a href="#todo">To Do</a></li>				
-				</ul>
-				-->
-				
-			</div>
 
 			<h2 id="introductions">Introductions</h2>
 			<div class="contblock">
@@ -490,15 +452,6 @@
 			page content ends
 			*************************************
 			-->		
-
-			<div id="toolbar">
-				<div>
-					<img id = "logo" src="../images/logo.png" alt="logo" />
-					<img id = "expand" src="/images/add.png" alt="add">
-					<img id = "collapse" src="/images/minus.png" alt="minus">
-					<a href="#">Top</a>
-				</div>
-			</div>
 			
 			<!-- footer begins -->
 			<div id="footer">
