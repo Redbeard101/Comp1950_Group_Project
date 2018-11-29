@@ -1,5 +1,5 @@
 /* Greater than 500*/
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 800px) {
   #top {
     margin: 0;
     padding: 0;
@@ -225,7 +225,7 @@
 }
 
 /* Less than 500px*/
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 800px) {
   #top {
     margin: 0;
     padding: 0;
