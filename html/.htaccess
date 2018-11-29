@@ -1,0 +1,3 @@
+# 404 
+# Replaces 404 error page for the bcitcomp website
+ErrorDocument 404 /error.html
