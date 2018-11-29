@@ -11,10 +11,19 @@
 #quizInformation {
 	text-align : center;	
 }
-	
+
 #footer {
-  background-color: #a0aeff;
-  text-align : center;
+width: 100%;
+text-align: right;
+background-color: #a0aeff;
+height:100%;
+}
+#footer ul li {
+margin-top:6px;
+margin-bottom:-20px;
+padding: 10px;
+display: inline-block;
+background-color: #fff;
 }
 
 /*reused from lecture revamp*/
@@ -32,9 +41,11 @@
 }
 
 h1 {
-  color: #ffffff;
-  text-align: center;
-  margin: 0;
+color: #ffffff;
+text-shadow: 2px 2px 2px #44518f;
+text-align: center;
+margin: 1%;
+padding-bottom:10px;
 }
 
 h2 {
