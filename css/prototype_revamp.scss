@@ -311,7 +311,7 @@ $full_opacity: 1.0;
 
     #expand{
         background-color: $white;
-        width: 50px;
+        width: 30px;
         height: auto;
         margin:0.5%;
         opacity: $light_opacity;
@@ -323,7 +323,7 @@ $full_opacity: 1.0;
 
     #collapse{
         background-color: $white;
-        width: 50px;
+        width: 30px;
         height: auto;
         margin:0.5%;
         opacity: $light_opacity;
@@ -411,19 +411,19 @@ $full_opacity: 1.0;
 
     #header_classes{
         text-align: right;
-        margin:0px 5px;
+        margin:5px 5px;
 
         ul{
-            margin:0 0 10px 0;
+            margin:0;
         }
 
         li{
             display: inline;    
             background-color: rgb(164, 171, 235);
             border-radius: 2px;
-            font-size: 1.0em;
-            margin: 3px;
-            padding: 4px;
+            font-size: 0.6em;
+            margin: 1px;
+            padding: 2px;
             border: 1px solid $border_blue;
         }
 
@@ -434,7 +434,7 @@ $full_opacity: 1.0;
 
     #header_buttons{
         ul {
-            margin:15px 0;
+            margin:10px 0;
             float:right;
         }
 
@@ -509,7 +509,7 @@ $full_opacity: 1.0;
     }
 
     #logo{
-        max-height: 55px;
+        max-height: 40px;
         margin: 5px;
         width: auto;
         float: left;
@@ -526,6 +526,10 @@ $full_opacity: 1.0;
                 box-shadow: 3px 3px 2px $shadow_color;
         img{
             max-width: 70%;
+        }
+
+        ul li{
+            max-width: 90%;
         }
     }
 
